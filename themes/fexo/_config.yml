@@ -1,23 +1,26 @@
 # Blog info
 blog_name: BlueSun
-slogan: Coding is most excting things
+slogan: Coding is most exciting things
 
 # Set avatar (Absolute url and relative url)
 avatar: /images/avatar.jpg
 
 # Set favicon
-favicon: /favicon.ico
+favicon: /images/favicon.ico
 
 # For seo
-keywords: forsigner,前端,设计,Hexo主题,前端开发,用户体验,设计,frontend,design,nodejs,JavaScript
+keywords: huang-jerrryc,JerryC8080,jerryc,JC_Huang,前端,设计,前端开发,用户体验,设计,frontend,design,nodejs,JavaScript
 
 init_page_content: HOME_NAV  # HOME_NAV | POST
 
 home_nav:
   - name: Blog
     url: /archives
-  - name: Github
+  - name: GitHub
     url: https://github.com/JerryC8080
+    target: _blank
+  - name: Jianshu
+    url: http://www.jianshu.com/users/843d2366f95b/latest_articles
     target: _blank
 
 # config page nav
@@ -33,7 +36,7 @@ page_nav_style: CIRCLE  # CIRCLE|ROUND_RECT
 
 # 面包屑
 breadcrumb:
-  isShow: true # true|fase
+  isShow: false # true|fase
 
 # 盒子
 toolbox:
@@ -44,47 +47,26 @@ post:
   showToc: true # true|false
 
 link:
-  - name: 织网
-    info: 身体和灵魂，总有一个在路上
-    url: http://zheng-ji.info/
-    avatar: https://avatars3.githubusercontent.com/u/1414745?v=3&s=460
-  - name: Dongyado
-    info: 生命不止，折腾不息
-    url: http://dongyado.com/
-    avatar: https://avatars0.githubusercontent.com/u/6274940?v=3&s=460
-  - name: OrangeCoder
+  - name: Xie Zefan
     info: xxx
-    url: http://orangecoder.com/
-    avatar: https://avatars0.githubusercontent.com/u/2263785?v=3&s=460
-  - name: EverET
-    info: xxx
-    url: http://everet.org/about-me/
-    avatar: https://avatars1.githubusercontent.com/u/1559563?v=3&s=460
-  - name: 题叶
-    info: xxx
-    url: http://tiye.me/
-    avatar: https://avatars2.githubusercontent.com/u/449224?v=3&s=460
+    url: http://xiezefan.me/
+    avatar: http://xiezefan.qiniudn.com/avatar.jpg
 
 
 about:
   - type: me
     icon: icon-user
     text_value:
-    - "Scut，1991，Spring."
-    - "喜欢设计，擅长编程，喜欢睡懒觉."
-    - "前端开发工程师，常用 HTML / CSS / JavaScript."
+    - "JerryC"
+    - "君子，厚积薄发也"
   - type: Github
     icon: icon-github
     text_key: Github
-    text_value: "@forsigner"
-    text_value_url: https://github.com/forsigner
-  - type: weibo
-    text_key: 微博
-    text_value: "@forsigner"
-    text_value_url: http://weibo.com/u/1847075964
+    text_value: "@JerryC8080"
+    text_value_url: https://github.com/JerryC8080
   - type: mail
     text_key: Gmail
-    text_value: "forsigner@gmail.com"
+    text_value: "huangjerryc@gmail.com"
   - type: location
     icon: icon-location
     text_value: 珠海
@@ -94,7 +76,7 @@ google_analytics:
 baidu_analytics: 57e94d016e201fba3603a8a2b0263af0
 
 # Comment service
-disqus_shortname: forsigner
+disqus_shortname: bluesun-jerryc
 # duoshuo_shortname: forsigner
 
 # Custom CSS style
