@@ -1,6 +1,6 @@
 # Blog info
 blog_name: BlueSun
-slogan: Coding is most exciting things
+slogan: 写取一枝清瘦竹，秋风江上作渔竿
 
 # Set avatar (Absolute url and relative url)
 avatar: /images/avatar.jpg
@@ -73,7 +73,7 @@ about:
 
 # Stats
 google_analytics:
-baidu_analytics: 57e94d016e201fba3603a8a2b0263af0
+baidu_analytics: b65b3ffc3fd0d14c968e1036793e631b
 
 # Comment service
 disqus_shortname: bluesun-jerryc
