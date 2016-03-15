@@ -64,6 +64,18 @@ about:
     text_key: Github
     text_value: "@JerryC8080"
     text_value_url: https://github.com/JerryC8080
+  - type: CNode
+    text_key: CNode
+    text_value: "@JerryC8080"
+    text_value_url: https://cnodejs.org/user/JerryC8080
+  - type: SegmentFault
+    text_key: SegmentFault
+    text_value: "@JC-Huang"
+    text_value_url: https://segmentfault.com/u/jerryc
+  - type: 简书
+    text_key: 简书
+    text_value: "@JC-Huang"
+    text_value_url: http://www.jianshu.com/users/843d2366f95b/latest_articles
   - type: mail
     text_key: Gmail
     text_value: "huangjerryc@gmail.com"
