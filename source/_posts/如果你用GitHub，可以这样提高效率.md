@@ -52,7 +52,7 @@ Coding真的是一款很不错的产品，可称为业届良心。
 
 不知道你有没有好奇Github上的一些明星项目的这样的标签：
 
-[![Build Status](https://travis-ci.org/strongloop/express.svg?branch=master)](https://travis-ci.org/strongloop/express)
+[![Build Status](https://travis-ci.org/expressjs/express.svg?branch=master)](https://travis-ci.org/expressjs/express)
 
 这个是Express的构建状态的标签，格式是svg，它会根据Express的构建状态改变。如果Express的某一次提交是没有通过TravisCI构建的，他会变成 build failing。（有心人可以点击这个标签进去看看。）
 
