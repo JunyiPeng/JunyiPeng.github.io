@@ -77,7 +77,6 @@ Foo.prototype.__proto__ === Object.prototype; // true
 ```
 
 `prototype`属性很特殊，它还有一个隐式的`constructor`，指向了构造函数本身。
-并且`constructor`属性会随着构造函数构造实例的时候，赋值给实例对象，也就是说，实例对象也含有`constructor`属性，指向到构造函数。
 
 
 ```javascript
