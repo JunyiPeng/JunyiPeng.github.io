@@ -3,6 +3,7 @@ title: Javascript 原型中的哲学思想
 date: 2016-06-28 23:12:00
 tags:
 - Javascript
+category: 搬砖码农
 ---
 
 
