@@ -22,6 +22,11 @@ home_nav:
   - name: Jianshu
     url: http://www.jianshu.com/users/843d2366f95b/latest_articles
     target: _blank
+  - name: SF
+    url: https://segmentfault.com/u/jerryc
+    target: _blank
+  - name: About Me
+    url: /about
 
 # config page nav
 page_nav:
@@ -70,12 +75,16 @@ about:
     text_value_url: https://cnodejs.org/user/JerryC8080
   - type: SegmentFault
     text_key: SegmentFault
-    text_value: "@JC-Huang"
+    text_value: "@JerryC"
     text_value_url: https://segmentfault.com/u/jerryc
   - type: 简书
     text_key: 简书
     text_value: "@JC-Huang"
     text_value_url: http://www.jianshu.com/users/843d2366f95b/latest_articles
+  - type: Weibo
+    text_key: 微博
+    text_value: "@大大大大大大培杰"
+    text_value_url: http://weibo.com/2254858394
   - type: mail
     text_key: Gmail
     text_value: "huangjerryc@gmail.com"
