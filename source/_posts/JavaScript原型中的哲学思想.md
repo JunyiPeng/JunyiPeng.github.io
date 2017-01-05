@@ -128,3 +128,20 @@ Object.prototype.isPrototypeOf(Bar) // true
 我只是感慨：
 **越往JavaScript的深处探索，越发觉得这一门语言很哲学。**
 
+# 先有鸡还是先有蛋？
+> update on 2017/01/05
+
+时隔半年，偶尔翻开这篇文章。    
+对于这个问题，又有了新的思考。    
+愿意跟能看到这里的你来分享一下。
+
+我们可以先把 `Object.prototype` 和 `Function.prototype` 这两个拎出来看，因为他们本身就是一个实例对象。
+为方便理解，我们改一下名字，避免和 Object 和 Function 的强关联，分别叫：`Op` 和 `Fp`
+
+那么就有这样的原型链存在了 
+
+![先有鸡还是先有蛋](/image/blog/philosophy-though-of-javascript-proto/object-or-function-first.png)
+
+我再描述一下上面的原型链，先有 null , 再有了 Op , 然后再有了 Fp ，然后以 Fp 为原型的两个构造函数 (Object, Function) 出现了。    
+而作为构造函数，需要有个 prototype 属性用来作为以该构造函数创造的实例的继承。    
+所以Object.prototype = Op, Function.prototype = Fp。
