@@ -127,3 +127,5 @@ doc
 
 coverage
 assets/styles/**/*.css
+
+public
