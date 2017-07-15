@@ -24,6 +24,7 @@ tags:
 一个像素只能表达一个色块，是显示的最小的一个单元。
 
 而在我们写代码的时候，可以把像素分为两种：
+
 1. 物理像素 Physical pixels
 2. 逻辑像素 Logical pixels
 
@@ -32,7 +33,7 @@ tags:
 
 我们来看一下 iPhone6 (左图) 与 iPhone6 plus (右图) 的官方显示屏的规格说明：
 
-![WX20170520-234954.png](quiver-image-url/518488434BEC1074B675EB42A5A57AEF.png)
+![iPhone6 & iPhone6 plus 规格](http://om6ayrafu.bkt.clouddn.com/post/talk-about-pixel-and-rpx/518488434BEC1074B675EB42A5A57AEF.png)
 
 iPhone6 是 `1334px x 750px` 的像素分辨率，意思是当手机竖放的时候，横向有 750 个物理像素，纵向有 1334 个物理像素。
 
@@ -41,7 +42,7 @@ iPhone6 是 `1334px x 750px` 的像素分辨率，意思是当手机竖放的时
 
 例如我们平时使用 Chrome 的设备调试工具的时候，iPhone6 是高 `667px`，宽是 `375px`，与苹果官方的 `1334px x 750px`，长宽分别少了 2 倍，那么面积就少了 4 倍。这就是经常说的 Retina 屏幕用四个(物理)像素表示一个(逻辑)像素。
 
-![WX20170521-000948.png](quiver-image-url/9C4CD0061C94690AF81DB8DED8F71252.png)
+![Chrome 下 iPhone6 逻辑像素](http://om6ayrafu.bkt.clouddn.com/post/talk-about-pixel-and-rpx/9C4CD0061C94690AF81DB8DED8F71252.png)
 
 # PPI
 
@@ -55,9 +56,10 @@ Pixels per inch，每英寸像素，也被称为像素密度，意思是一英�
 要计算显示器的每英寸像素值，首先要确定屏幕的尺寸和分辨率。
 PPI 计算公式：
 
-![CodeCogsEqn (2).gif](quiver-image-url/855BB6047CE2CA7F9DBBF1791D52C6CC.gif)
+![PPI 计算公式](http://om6ayrafu.bkt.clouddn.com/post/talk-about-pixel-and-rpx/855BB6047CE2CA7F9DBBF1791D52C6CC.gif)
 
 其中，
+
 * dp (device pixel) 为屏幕对角线的分辨率
 * wp (width pixel) 为屏幕横向分辨率
 * hp (height piexl) 为屏幕纵向分辨率
@@ -65,7 +67,7 @@ PPI 计算公式：
 
 以 iPhone6 为例：
 
-![CodeCogsEqn.gif](quiver-image-url/2A67EB1D8C0873E419C676DB430570C2.gif)
+![iPhone6 PPI 计算](http://om6ayrafu.bkt.clouddn.com/post/talk-about-pixel-and-rpx/2A67EB1D8C0873E419C676DB430570C2.gif)
 
 四舍五入那便是 `326ppi` 了。
 
@@ -74,7 +76,7 @@ PPI 计算公式：
 「物理像素」是有特定长度的，这取决于 ppi 值。
 
 那么如何求出一个设备的物理像素的长度？
-因为全部物理像素都是方形的，我们可以假设当前设备的像素是方形的。
+因为绝大多数设备的物理像素都是方形的，我们可以假设当前设备的像素是方形的。
 那么，
 
 * iPhone6 中每个像素长度：1inch / 326ppi ≈ 0.003 inch = 0.0762mm
@@ -84,7 +86,7 @@ PPI 计算公式：
 因为像素越小，那么单位面积内像素点就越多，显示的效果人眼就越难看出毛刺。
 用来显示一份图像的像素越多，效果就越接近现实。
 
-和物理像素不同，「逻辑像素」没有特定的物理长度的，只是表示显示设备中最小的显示单元，优秀的显示设备完全可以把显示单元做的更加小，已达到更好的显示效果。
+和物理像素不同，「逻辑像素」没有特定的物理长度的，只是表示显示设备中最小的显示单元，优秀的显示设备完全可以把显示单元做的更加小，以达到更好的显示效果。
 
 # DPR
 Device Pixel Ratio，设备像素比。
@@ -94,6 +96,7 @@ Device Pixel Ratio，设备像素比。
 iPhone4 的分辨率提高了一倍，但屏幕尺寸却没有变化，这意味着同样大小的屏幕上，像素多了一倍，于是 `dpr = 2`。
 
 在 Chrome 浏览器可以通过以下代码获取设备的 DPR：
+
 ```
 let dpr = window.devicePixelRatio;
 ```
@@ -108,10 +111,12 @@ let logicalWidth = screen.width;
 那么很多人看到这里，就会认为：`物理像素 = 逻辑像素 * dpr`
 但实际情况并不是这样，
 留意一下 iPhone6 plus 的物理像素和逻辑像素：
+
  * 物理像素：`1080px x 1920px`
  * 逻辑像素：`414px x 736px`
  
 而官方声称 iPhone6 plus 的 `dpr = 3`，按理应该是：
+
  * `414px x 736px` → 乘以 3 倍 dpr → `1242px x 2208px`
  
 那么 iPhone6 plus 只有 `1080px x 1920px`，怎么去展示 `1241px x 2208px` 的分辨率呢？
@@ -127,7 +132,7 @@ let logicalWidth = screen.width;
 # 回到 rpx
 
 根据官方给出的 rpx 换算 px 的实例：
-![WX20170521-130224.png](quiver-image-url/ACED349F80C8D926AB74922C360B2F5A.png)
+![rpx 换算 px](http://om6ayrafu.bkt.clouddn.com/post/talk-about-pixel-and-rpx/ACED349F80C8D926AB74922C360B2F5A.png)
 
 三款机器的逻辑像素：
 
@@ -153,6 +158,5 @@ rpx 转换成 px 是需要乘以一个系数的：
 # 参考
 [Wiki - 像素](https://www.wikiwand.com/zh-sg/%E5%83%8F%E7%B4%A0)
 [Wiki - 每英寸像素](https://www.wikiwand.com/zh-sg/%E6%AF%8F%E8%8B%B1%E5%AF%B8%E5%83%8F%E7%B4%A0)
-[iPhone 6 Screens Demystified](http://www.cnblogs.com/fayin/p/6346754.html
-https://www.paintcodeapp.com/news/iphone-6-screens-demystified)
+[iPhone 6 Screens Demystified](https://www.paintcodeapp.com/news/iphone-6-screens-demystified)
 
