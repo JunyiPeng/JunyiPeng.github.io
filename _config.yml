@@ -70,7 +70,7 @@ theme: fexo
 deploy:
   type: git
   repo: git@github.com:JunyiPeng/junyipeng.github.io.git
-  branch: masters
+  branch: master
   message: "feat(post):update post {{ now('YYYY-MM-DD HH:mm:ss') }}"
 
 # Extensions
